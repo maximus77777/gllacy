@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+
+  src: url("fonts/roboto.woff2") format("woff2"),
+       url("fonts/roboto.woff") format("woff");
+
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+
+  src: url("fonts/robotomedium.woff2") format("woff2"),
+       url("fonts/robotomedium.woff") format("woff");
+
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+
+  src:   url("fonts/robotobold.woff2") format("woff2"),
+         url("fonts/robotobold.woff") format("woff");
+}
+
+
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--light-black);
+
+  background-color: var(--basic-green);
+
+  min-height: 100%;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/*Global*/
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  overflow: hidden;
+}
+
+:root {
+  --basic-green: #849d8f;
+  --basic-blue: #8996a6;
+  --basic-brown: #9d8b84;
+}
+
