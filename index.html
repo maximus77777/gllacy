@@ -9,20 +9,20 @@
   <link rel="mask-icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-
 <!--   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/ministyle.css">
 </head>
 <body class="page-body page-body-bg-color_0">
   <header class="page-header">
     <nav class="main-nav container">
       <a class="logo-header">
-        <img src="img/logo.png" width="154" height="64" alt="Логотип-шапка">
+        <img src="img/logo.png" width="154" height="64" alt="Логотип главной страницы">
       </a>
       <ul class="list-nav">
         <li class="elem-nav elem-nav-hover">
-          <a class="link-nav link-nav-hover" href="catalog.html">Каталог</a>
+          <div class="link-wrapper">
+            <a class="link-nav" href="catalog.html">Каталог</a>
+          </div>
           <ul class="sublist-nav sublist-menu">
             <li class="subelem-nav  subelem-header">
               <h2 class="sublink-header">Новинки</h2>
@@ -41,23 +41,27 @@
             </li>
           </ul>
         </li>
-        <li class="elem-nav">
-          <a class="link-nav" href="#">Доставка и оплата</a>
+        <li class="elem-nav elem-nav-hover">
+          <div class="link-wrapper">
+            <a class="link-nav" href="#">Доставка и оплата</a>
+          </div>
         </li>
-        <li class="elem-nav">
-          <a class="link-nav" href="#">О Компании</a>
+        <li class="elem-nav elem-nav-hover">
+          <div class="link-wrapper">
+            <a class="link-nav" href="#">О Компании</a>
+          </div>
         </li>
       </ul>
       <ul class="list-second-nav list-second-nav-width">
         <li class="elem-second-nav elem-second-nav-hover">
-          <a class="link-second-nav link-search" href="#">Поиск</a>
+          <a class="link-second-nav link-second-hover link-search" href="#">Поиск</a>
           <form class="form-search-wrapper form-search" action="#" method="get">
             <label class="visually-hidden" for="search">Поиск</label>
             <input type="search" name="ice-cream" id="search" placeholder="Крем-брюле">
           </form>
         </li>
         <li class="elem-second-nav elem-second-nav-hover">
-          <a class="link-second-nav link-login" href="#">Вход</a>
+          <a class="link-second-nav link-second-hover link-login" href="#">Вход</a>
           <form class="form-email" action="#" method="get">
             <div class="form-grid">
               <div class="form-wrapper">
@@ -79,17 +83,19 @@
           </form>
         </li>
         <li class="elem-second-nav">
-          <a class="link-second-nav link-cart" href="#">Пусто</a>
+          <a class="link-second-nav link-second-hover link-cart" href="#" aria-label="Корзина">Пусто</a>
         </li>
       </ul>
-      <div class="address">
-        <p>С 10 до 20, ежедневно</p>
-        <a href="tel:88124502525">8 812 450-25-25</a>
-      </div>
     </nav>
   </header>
-
   <main class="page-main">
+    <h1 class="visually-hidden">Магазин Глейси - для продажи вкусного мороженного!</h1>
+    <div class="address_column container">
+      <div class="address">
+        <p aria-label="Расписание С 10 до 20, ежедневно">С 10 до 20, ежедневно</p>
+        <a href="tel:88124502525" aria-label="Телефон: 8 812 450-25-25">8 812 450-25-25</a>
+      </div>
+    </div>
     <section class="promo container">
       <h2 class="visually-hidden">Слайдер</h2>
         <ul class="list-slides">
@@ -110,9 +116,9 @@
           </li>
         </ul>
         <div class="control-buttons">
-          <button class="btn-slider btn-slider-active" type="button">1</button>
-          <button class="btn-slider" type="button">2</button>
-          <button class="btn-slider" type="button">3</button>
+          <button class="btn-slider btn-slider-active" type="button" aria-label="Кнопка №1 Выбор двух мороженных со скидкой">1</button>
+          <button class="btn-slider" type="button" aria-label="Кнопка №2 Выбор двух мороженных со скидкой">2</button>
+          <button class="btn-slider" type="button" aria-label="Кнопка №3 Выбор двух мороженных со скидкой">3</button>
         </div>
     </section>
     <section class="second-order">
@@ -159,7 +165,7 @@
         </li>
         <li class="elem-catalog checkbox-product">
           <h3><a class="catalog-header" href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
-          <p class="text-price">415 &#8381;<span>/кг</span></p>
+          <p>415 &#8381;<span>/кг</span></p>
           <img src="img/ice-cream-4.png" width="267" height="267" alt="">
           <a class="btn" href="">Быстрый просмотр</a>
         </li>
@@ -212,7 +218,7 @@
           <h2 class="visually-hidden">Блог</h2>
           <p>Новое в нашем блоге</p>
           <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-        </aricle>
+        </article>
       </div>
       <div class="newsletter_column">
         <section class="newsletter">
@@ -224,8 +230,8 @@
               и не слать всякой ненужной ерунды. Честно =) 
             </p>
             <form class="email-wrapper" action="#" method="get">
-              <label class="visually-hidden" for="email">Почта:</label>
-              <input type="email" name="email" id="email" placeholder="email@example.com">
+              <label class="visually-hidden" for="email-newsletter">Почта:</label>
+              <input type="email" name="email-newsletter" id="email-newsletter" placeholder="email@example.com">
               <button class="btn" type="submit">Отправить</button>
             </form>
           </div>
@@ -240,7 +246,7 @@
             <img class="big-map" src="img/big-map.png" width="1200" height="640" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
             <img class="marker-map" src="img/marker.png" width="218" height="142" alt="">
           </div>
-          <iframe src="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&z=17.2" width="1200" height="430" frameborder="1" allowfullscreen="true""></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&z=17.2" width="1200" height="430"></iframe>
         </div>
         <div class="address-map-column container">
           <div class="address-map">
@@ -253,11 +259,10 @@
                 <span>(с 10 до 20 ежедневно)</span>
               </dd>
             </dl>
-            <a class="btn btn-address" href="#">Форма обратной связи</a>
+            <a class="btn btn-address" href="writeus.html">Форма обратной связи</a>
           </div>
         </div>
       </div>
-      
     </section>
   </main>
   <footer class="page-footer">
@@ -311,8 +316,8 @@
         <input class="modal-initials" type="text" name="login" id="login" placeholder="Имя Фамилия">
       </div>
       <div class="modal-wrapper">
-        <label class="visually-hidden" for="email">Почта</label>
-        <input type="modal-email" name="email" id="email" placeholder="email@example.com">
+        <label class="visually-hidden" for="modal-email">Почта</label>
+        <input type="email" name="modal-email" id="modal-email" placeholder="email@example.com">
       </div>
       <div class="modal-wrapper">
         <label class="visually-hidden" for="text">Текст в свободной форме</label>
@@ -322,7 +327,7 @@
     </form>
     <button class="modal-close modal-link-close" type="button">Закрыть</button>
   </section>
-  <script src="js/index.js"></script>
+  <script src="js/miniscript.js"></script>
 </body>
 </html>
 

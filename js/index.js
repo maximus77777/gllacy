@@ -1,9 +1,6 @@
-//Слайдер
 const buttonSliders = document.querySelectorAll(".btn-slider");
 const slides = document.querySelectorAll(".slide");
 const backgroundColor = document.querySelector(".page-body");
-//Модальное окно
-
 const link = document.querySelector(".btn-address");
 const close = document.querySelector(".modal-link-close");
 const popup = document.querySelector(".modal");
@@ -65,8 +62,6 @@ window.addEventListener("keydown", function(evt) {
     }
   }
 });
-
-//Слайдер
 
 for(let i = 0; i < buttonSliders.length; i++) {
   buttonSliders[i].addEventListener("click", function(evt){
