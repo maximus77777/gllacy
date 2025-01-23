@@ -1654,7 +1654,6 @@ img {
 
   margin: 0;
   padding: 0;
-  margin-top: 21px;
   margin-bottom: 47px;
 
   color: var(--basic-white);
@@ -1676,8 +1675,7 @@ img {
   position: relative;
 
   width: 267px;
-  min-height: 405px;
-  margin-bottom: -43px;
+  margin-bottom: 34px;
   padding-top: 6px;
 
   -webkit-box-sizing: border-box;
@@ -1688,11 +1686,11 @@ img {
   content: "";
 
   position: absolute;
+  top: 0;
   left: -13px;
-  bottom: 0;
 
   width: 293px;
-  height: 100%;
+  min-height: 125%;
 
   background-color: var(--transparent-white_4);
 
@@ -1728,15 +1726,13 @@ img {
 }
 
 .elem-catalog h3 {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 
   position: relative;
 
   margin: 0;
-  margin-bottom: auto;
-  padding-bottom: 10px;
 
   font-size: 1em;
   line-height: 1.375em;
@@ -1766,9 +1762,9 @@ img {
 }
 
 .elem-catalog p {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   -ms-flex-item-align: start;
       align-self: flex-start;
 
@@ -1789,23 +1785,23 @@ img {
 }
 
 .elem-catalog .btn {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 
-  position: relative;
+  display: none;
 
-  margin-bottom: 21px;
+  position: absolute;
+  top: 104.5%;
+
   padding-left: 16px;
   padding-right: 16px;
-
-  opacity: 0;
 
   z-index: 1;
 }
 
 .list-catalog .elem-catalog:hover .btn {
-  opacity: 1;
+  display: block;
 }
 
 .page-main .advantages {
@@ -2187,6 +2183,8 @@ img {
 
 .page-main .filter {
   color: var(--basic-white);
+
+  margin-bottom: 35px;
 }
 
 .filter h2 {
@@ -2208,7 +2206,7 @@ img {
 
   width: 870px;
   min-height: 147px;
-  padding-top: 26px;
+  padding-top: 12px;
 }
 
 .filter-form-wrapper .fieldset-elem {
@@ -3036,7 +3034,8 @@ img {
   width: 138px;
   min-height: 43px;
   padding-top: 5px;
-  padding-left: 24px;
+  padding-left: 23px;
+  padding-right: 23px;
 
   word-break: break-all;
 
